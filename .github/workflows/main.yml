@@ -52,4 +52,4 @@ jobs:
         $HTML_URL"
         git remote -v
         git remote add github git@github.com:$GITHUB_REPOSITORY.git
-        git push github master
+        git push github `git rev-parse --abbrev-ref HEAD`
