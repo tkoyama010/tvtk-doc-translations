@@ -1,8 +1,8 @@
-# mayavi-doc.org on the Read The Docs.
+# tvtk-doc.org on the Read The Docs.
 
-[![mayavi-auto-update](https://github.com/getfem-doc/mayavi-doc-translations/workflows/mayavi-auto-update/badge.svg)](https://github.com/getfem-doc/mayavi-doc-translations/actions) [![Documentation Status](https://readthedocs.org/projects/mayavi-ja/badge/?version=latest)](https://mayavi-ja.readthedocs.io/ja/latest/?badge=latest)
+[![tvtk-auto-update](https://github.com/getfem-doc/tvtk-doc-translations/workflows/tvtk-auto-update/badge.svg)](https://github.com/getfem-doc/tvtk-doc-translations/actions) [![Documentation Status](https://readthedocs.org/projects/tvtk-ja/badge/?version=latest)](https://tvtk-ja.readthedocs.io/ja/latest/?badge=latest)
 
-This is a project to provide mayavi official documentation with multiple versions and multiple languages on Read The Docs site.
+This is a project to provide tvtk official documentation with multiple versions and multiple languages on Read The Docs site.
 
 Current procedure is bit tricky because Read The Docs doesn't have a way to specify options for sphinx-build command.
 conf.py files for each languages have 'language' and 'locale_dirs' values without having full copy of conf.py of sphinx doc. If we want to specify conf.py file that is out of source directory, we will use '-c' option for sphinx-build command. Unfortunately Read the Docs can't. If there are any better way, please let me know.
@@ -11,13 +11,13 @@ conf.py files for each languages have 'language' and 'locale_dirs' values withou
 
 * RTD project pages for Sphinx:
 
-  * https://readthedocs.org/projects/mayavi/  (Master)
-  * https://readthedocs.org/projects/mayavi-ja/
+  * https://readthedocs.org/projects/tvtk/  (Master)
+  * https://readthedocs.org/projects/tvtk-ja/
 
 * Documentation pages for each languages:
 
-  * https://mayavi.readthedocs.io/en/latest/
-  * https://mayavi.readthedocs.io/ja/latest/
+  * https://tvtk.readthedocs.io/en/latest/
+  * https://tvtk.readthedocs.io/ja/latest/
 
 ## How to setup a translated documentation project on RTD
 
@@ -56,11 +56,11 @@ After that, you should commit updated po files.
 
 4. add new project on Read The Docs like:
 
-   https://readthedocs.org/projects/mayavi-ja/
+   https://readthedocs.org/projects/tvtk-ja/
 
 5. add translation project to parent project like:
 
-   https://readthedocs.org/dashboard/mayavi/translations/
+   https://readthedocs.org/dashboard/tvtk/translations/
 
 
 ## How to add a new version
@@ -86,5 +86,5 @@ After that, you should commit updated po files.
 
 4. enable version 1.7 on RTD:
 
-   https://readthedocs.org/projects/mayavi/versions/
+   https://readthedocs.org/projects/tvtk/versions/
 
