@@ -1,0 +1,3 @@
+[submodule "mayavi"]
+	path = mayavi
+	url = https://github.com/enthought/mayavi.git
