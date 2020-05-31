@@ -1,0 +1,281 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2008-2016, Enthought Inc.
+# This file is distributed under the same license as the tvtk package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: tvtk 4.7.2.dev0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-31 00:18+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:3
+msgid "Development guide for TVTK"
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:0
+msgid "Author"
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:4
+msgid "Prabhu Ramachandran"
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:0
+msgid "Contact"
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:5
+msgid "prabhu_r@users.sourceforge.net"
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:0
+msgid "Copyright"
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:6
+msgid "2004-2020, Enthought, Inc."
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:9
+msgid "Contents"
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:12
+msgid "Introduction"
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:14
+msgid "This document provides some details on how TVTK works and how it is implemented.  Basic documentation on the installation, features and usage of tvtk is provided in the README.txt file that should be in the same directory as this file."
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:21
+msgid "How tvtk works"
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:23
+msgid "All tvtk classes derive from `TVTKBase`.  This is defined in `tvtk_base.py`.  `TVTKBase` provides basic functionality common to all tvtk classes.  Most importantly it provides for the following:"
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:27
+msgid "Allows one to wrap an existing VTK object or create a new one. `TVTKBase.__init__` accepts an optional VTK object, that can be used to wrap an existing VTK object.  Read the method docstring for more details."
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:32
+msgid "Sets up the event handlers that allow us to listen to any changes made to the underlying VTK object."
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:35
+msgid "Basic support for pickling the object."
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:37
+msgid "The `update_traits` automatically updates the traits of the tvtk class such that they reflect the state of the underlying VTK object."
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:41
+msgid "Common code to change the underlying VTK object when the trait is changed."
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:44
+msgid "As mentioned above, tvtk classes can either wrap an existing VTK object or create a new one and manage the new object."
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:49
+msgid "Automatic trait updation"
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:51
+msgid "One very important feature of tvtk objects is that any VTK related traits of object are dynamically updated if the underlying VTK object is changed.  This is achieved by adding an observer to the VTK object that effectively calls TVTKBase.update_traits when the 'ModifiedEvent' is invoked.  Here is an example of a VTK observer callback::"
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:67
+msgid "As can be seen, when the property is modified, the callback is called. The trouble with this approach is that `p` now holds a reference to `cb`.  Thus if `cb` were the `update_traits` method of the tvtk class that manages the VTK object, we run into a non-garbage-collectable reference cycle issue and a huge memory leak.  To get around this we use the functionality provided by `messenger.py`.  Effectively, `TVTKBase.__init__` tells messenger to call `self.update_traits` when it is called back from the VTK object.  Messenger itself uses `weakrefs` so the reference cycle problem does not exist.  The VTK object basically calls `messenger.send` and `messenger` takes care of the rest.  This allows the tvtk class to be safely used and also allows for automatic trait updation."
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:80
+msgid "Each tvtk class has an attribute called `_updateable_traits_`.  This is a tuple of tuples.  Each tuple contains a pair of strings like so::"
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:90
+msgid "The first string is the name of the trait and the second the name of the function used to obtain the value of the trait from the VTK object. `TVTKBase.update_traits` uses this tuple and for each trait it calls the relevant VTK 'get' function and updates the value of the trait."
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:96
+msgid "While this whole process seems to be inefficient, it actually works quite well in practice and does not appear to be slow at all."
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:101
+msgid "Messaging"
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:103
+msgid "The messaging functionality is defined in `tvtk/messenger.py`.  Unit tests are in the 'tests/' directory.  As described in the previous section, tvtk objects use the messenger functionality to ensure that the traits are always up to date.  `messenger.py` is well documented and tested.  So please read the docstrings for more details.  Here is some basic information from the documentation."
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:110
+msgid "`messenger.py` implements a simple, robust, safe, `Messenger` class that allows one to register callbacks for a signal/slot (or event/handler) kind of messaging system.  One can basically register a callback function/method to be called when an object sends a particular event.  The Messenger class is Borg.  So it is easy to instantiate and use.  This module is also reload-safe, so if the module is reloaded the callback information is not lost.  Method callbacks do not have a reference counting problem since weak references are used.  The main functionality is provided by three functions, `connect`, `disconnect` and `send`."
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:121
+msgid "`connect` basically allows one to connect an object, `obj`, that emits an event, `event` to a callback function, `callback`."
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:124
+msgid "When an object calls `send`, it passes itself, the event it wishes to emit along with any optional arguments and keyword arguments to send. All registered `callback` for the particular event are called with the the object that called it (`obj`), the event (`event`) and the optional arguments."
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:130
+msgid "`disconnect` allows one to disconnect either a particular callback, or all callbacks for a particular event or the entire object."
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:133
+msgid "The messenger class thus provides a simple observer pattern implementation that makes it easy to do inter-object communication. For further details please read the code and docstrings.  Also look at the test suite in `tests/test_messenger.py`."
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:140
+msgid "Pickling"
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:142
+msgid "`TVTKBase` provides the basic functionality for pickling. Essentially, the dictionary (`self.__dict__`) of the tvtk object is pickled.  The `_vtk_obj` attribute is not pickled since VTK objects are not picklable.  Other irrelevant attributes are also removed. `__setstate__` works even on a live object by checking to see if `self._vtk_obj` exists.  Some of the tvtk classes override these methods to implement them better.  For example look at the code for the `Matrix4x4` class."
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:153
+msgid "Array handling"
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:155
+msgid "TVTK lets the user pass Numeric arrays/Python lists in place of the `DataArray`, `CellArray`, `Points` etc. classes.  This is done by finding the call signature of the wrapped VTK method, checking to see if it has an array and then intelligently generating the appropriate VTK array data using the signature information.  This generated VTK data array is then passed to the wrapped function under the covers. This functionality also works if the method has multiple call signatures (overloaded VTK method) and one of them involves arrays. The main functions to do this conversion magic are in the `array_handler.py` module.  The `wrapper_gen.py` module generates the appropriate wrapper code depending on the call signature.  So if a method has no VTK objects in its signature, no wrapping is necessary. If it only has non-array VTK objects, then array handling is unnecessary but one must dereference the VTK object from the passed tvtk wrapper object.  If the call signature involves VTK array objects, then any Numeric arrays or Python lists are converted to the correct VTK data array and passed to the wrapped VTK object."
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:173
+msgid "For the efficient conversion to `CellArray` objects, an extension module is required.  The sources for this extension module are in `src/array_ext.*`.  The Cython_ file can be used to generate the `src/array_ext.c` file like so::"
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:181
+msgid "The sources ship with the generated source file so that folks without Cython can build it."
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:184
+msgid "`special_gen.py` defines all the additional methods for the `DataArray` and other classes that allow these objects to support iteration, `__repr__`, `__getitem__` etc."
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:193
+msgid "The magical `tvtk` instance"
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:195
+msgid "When one does the following::"
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:199
+msgid "The imported `tvtk` is really an instance of a class and not a module! This is so because, the tvtk classes are almost 800 in number and they wrap around the *entire* VTK API.  VTK itself allows one to import all the defined classes in one go.  That is, if one does `import vtk`, one can instantiate all VTK related classes.  This is very useful functionality.  However, importing 800 wrapper classes in one go is *extremely* slow.  Thus, `tvtk` provides a convenient solution to get around the problem.  While `tvtk` is a class instance, it behaves just like you'd expect of a module."
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:209
+msgid "It supports tab-completion on class names."
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:210
+msgid "Allows one to access all the tvtk classes."
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:211
+msgid "Imports extremely fast.  Any slowness in the import is really because tvtk needs to import VTK.  Thus importing tvtk should not be much slower than importing vtk itself."
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:214
+msgid "Imports the tvtk classes *only* on demand."
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:216
+msgid "All the tvtk related code is generated and saved into the `tvtk_classes.zip` file.  The `tvtk` instance is basically an instance of the TVTK class.  This is defined in `tvtk_helper.py`.  This file is inside the ZIP file.  For each wrapped VTK class, TVTK defines a property having the name of the wrapper tvtk class.  The `get` method of the property basically returns the class after importing it dynamically from the ZIP file.  This is done in the `get_class` function.  Each class thus imported is cached (in `_cache`) and if a cached copy exists the class is not re-imported.  Note that in the implementation, the class and its parent classes need to be imported. These parent classes are also cached."
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:228
+msgid "`enthought/tvtk/__init__.py` adds the `tvtk_classes.zip` file into `sys.path` and instantiates the TVTK class to provide the `tvtk` instance."
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:232
+msgid "Note that any files inside the `tvtk_classes.zip` are automatically generated."
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:237
+msgid "Miscellaneous details"
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:239
+msgid "`tvtk_base.py` defines some important and frequently used traits that are used in tvtk.  It is used by all the tvtk classes.  It provides a couple of useful functions (`get_tvtk_name` and `camel2enthought`) to perform name mangling so one can change the VTK method name to an enthought style name.  The module also provides the function `deref_vtk`, that lets one obtain the underlying VTK object from the tvtk object."
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:250
+msgid "Code Generation"
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:252
+msgid "All the tvtk classes are dynamically generated.  `code_gen.py` is the main driver module that is responsible for this.  Code generation works involves the following steps."
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:256
+msgid "Listing and sorting all the VTK classes into a class hierarchy. This is done by `class_tree.py`.  `ClassTree` basically organizes all the VTK classes into a tree structure.  The tree is organized into \"levels\".  The classes with no bases are at the lowest level (the root) and the higher levels represent classes that have one or more bases.  Each class in the tree is represented as a `Node`. Each node has references to its children and parents.  Thus one can walk the entire class hierarchy given a single node.  This is fairly generic code and will work with any class hierarchy.  Its main function is to allow us to generate the classes in the right order and also allows us to easily find the parents and children of a class in a class hierarchy.  More details are in the file `class_tree.py`.  UTSL."
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:270
+msgid "Parsing the methods of each VTK class and categorizing them.  This step also involves finding the default values of the state of the VTK objects, the valid range of values etc.  This entire functionality is provided by `vtk_parser.py`.  VTK parser module is completely self documenting and the public interface is fairly simple.  The `VTKMethodParser` by default uses an instance of the `ClassTree` class to do some of its work (the use of the `ClassTree` can be turned off though)."
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:279
+msgid "Formatting the output code correctly (indentation).  This is handled by the `indenter.Indent` class.  The `Indent` class lets us format a code-string suitably so that the code is formatted at the current indentation level."
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:284
+msgid "Massaging VTK documentation suitably.  This is done by `indenter.VTKDocMassager`."
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:287
+msgid "Generating the tvtk code.  Done mainly by `code_gen.py`."
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:289
+msgid "Generating a ZIP file of the code, also done by `code_gen.py`."
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:292
+msgid "The `code_gen` module defines a `TVTKGenerator` class that drives the code generation.  The module uses the `wrapper_gen` module to generate the wrapper classes."
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:296
+msgid "The `wrapper_gen` defines a `WrapperGenerator` class.  An instance of this class creates an instance of the `VTKMethodParser` (and uses its internal `ClassTree` instance).  `TVTKGenerator` uses this class tree."
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:300
+msgid "For each class in the VTK hierarchy (starting from classes at the root of the tree), the class is parsed, and a suitable tvtk wrapper class (with the name of the class and file name of the module suitably modified) is generated using the functionality provided by `WrapperGenerator`.  A separate `tvtk_helper` module (described in the `The magical tvtk instance`_ section) is also simultaneously updated with the class for which the wrapper is generated.  All of these classes are dumped into a temporary directory.  These classes are then put into a ZIP file."
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:310
+msgid "The `tvtk_helper.py` code is generated by the `HelperGenerator` class. The other tvtk classes are generated by the `WrapperGenerator` class. 'WrapperGenerator` also makes use of the `SpecialGenerator` to write special code for some of the VTK classes."
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:315
+msgid "`TVTKGenerator` uses the other code generators and drives the entire code generation process, builds a ZIP file and optionally cleans up the temporary directory where the wrapper code was written."
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:319
+msgid "Please run the following::"
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:323
+msgid "To see a list of options to the code generator.  Some of the options are extremely useful during development.  For example do this to generate the code for a few classes alone::"
+msgstr ""
+
+#: ../../mayavi/docs/source/tvtk/devel.txt:330
+msgid "The `-n` option ensures that '/tmp/tvtk_tmp' is not removed.  `-z` inhibits ZIP file generation."
+msgstr ""
