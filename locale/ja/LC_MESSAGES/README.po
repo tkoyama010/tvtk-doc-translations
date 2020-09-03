@@ -23,19 +23,19 @@ msgstr ""
 
 #: ../../mayavi/docs/source/tvtk/README.txt:3
 msgid "An Introduction to Traited VTK (tvtk)"
-msgstr ""
+msgstr "Traited VTK (tvtk) の概要"
 
 #: ../../mayavi/docs/source/tvtk/README.txt:0
 msgid "Author"
-msgstr ""
+msgstr "作者"
 
 #: ../../mayavi/docs/source/tvtk/README.txt:4
 msgid "Prabhu Ramachandran"
-msgstr ""
+msgstr "Prabhu Ramachandran"
 
 #: ../../mayavi/docs/source/tvtk/README.txt:0
 msgid "Contact"
-msgstr ""
+msgstr "連絡先"
 
 #: ../../mayavi/docs/source/tvtk/README.txt:5
 msgid "prabhu@enthought.com"
@@ -43,19 +43,19 @@ msgstr ""
 
 #: ../../mayavi/docs/source/tvtk/README.txt:0
 msgid "Copyright"
-msgstr ""
+msgstr "Copyright"
 
 #: ../../mayavi/docs/source/tvtk/README.txt:6
 msgid "2004-2020, Enthought, Inc."
-msgstr ""
+msgstr "2004-2020, Enthought, Inc."
 
 #: ../../mayavi/docs/source/tvtk/README.txt:9
 msgid "Contents"
-msgstr ""
+msgstr "目次"
 
 #: ../../mayavi/docs/source/tvtk/README.txt:12
 msgid "Introduction"
-msgstr ""
+msgstr "はじめに"
 
 #: ../../mayavi/docs/source/tvtk/README.txt:14
 msgid ""
