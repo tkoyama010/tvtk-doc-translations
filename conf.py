@@ -24,12 +24,10 @@ locale_dirs = [os.path.join(basedir, "../../../../locale/")]
 
 
 def setup(app):
-    from sphinx.ext.autodoc import cut_lines
     from sphinx.util.docfields import GroupedField
 
     app.srcdir = basedir
     app.confdir = app.srcdir
-    app.connect("autodoc-process-docstring", cut_lines(4, what=["module"]))
     app.add_object_type(
         "confval",
         "confval",
