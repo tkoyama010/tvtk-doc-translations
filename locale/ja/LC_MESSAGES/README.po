@@ -39,7 +39,7 @@ msgstr "連絡先"
 
 #: ../../mayavi/docs/source/tvtk/README.txt:5
 msgid "prabhu@enthought.com"
-msgstr ""
+msgstr "prabhu@enthought.com"
 
 #: ../../mayavi/docs/source/tvtk/README.txt:0
 msgid "Copyright"
@@ -68,15 +68,15 @@ msgstr ""
 
 #: ../../mayavi/docs/source/tvtk/README.txt:20
 msgid "All VTK classes are wrapped."
-msgstr ""
+msgstr "すべてのVTKクラスがラップされます。"
 
 #: ../../mayavi/docs/source/tvtk/README.txt:21
 msgid "Classes are generated at install time on the installed platform."
-msgstr ""
+msgstr "クラスは、インストールされたプラットフォームでインストール時に生成されます。"
 
 #: ../../mayavi/docs/source/tvtk/README.txt:22
 msgid "Support for traits_."
-msgstr ""
+msgstr "traits_ のサポート。"
 
 #: ../../mayavi/docs/source/tvtk/README.txt:23
 msgid "Elementary pickle support."
@@ -143,7 +143,7 @@ msgstr ""
 
 #: ../../mayavi/docs/source/tvtk/README.txt:53
 msgid "Installation"
-msgstr ""
+msgstr "インストール"
 
 #: ../../mayavi/docs/source/tvtk/README.txt:55
 msgid ""
