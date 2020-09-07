@@ -29,7 +29,6 @@ def setup(app):
 
     app.srcdir = basedir
     app.confdir = app.srcdir
-    app.connect("autodoc-process-docstring", cut_lines(4, what=["module"]))
     app.add_object_type(
         "confval",
         "confval",
