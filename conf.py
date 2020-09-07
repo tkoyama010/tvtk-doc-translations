@@ -24,7 +24,6 @@ locale_dirs = [os.path.join(basedir, "../../../../locale/")]
 
 
 def setup(app):
-    from sphinx.ext.autodoc import cut_lines
     from sphinx.util.docfields import GroupedField
 
     app.srcdir = basedir
