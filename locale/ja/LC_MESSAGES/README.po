@@ -119,7 +119,7 @@ msgstr ""
 #: ../../mayavi/docs/source/tvtk/README.txt:43
 msgid ""
 "Python should be built with zlib support and must support ZIP file imports."
-msgstr ""
+msgstr "Pythonはzlibサポートでビルドされ、ZIPファイルのインポートをサポートしている必要があります。"
 
 #: ../../mayavi/docs/source/tvtk/README.txt:45
 msgid "VTK-5.x, VTK-4.4 or VTK-4.2.  It is unlikely to work with VTK-3.x."
@@ -209,7 +209,7 @@ msgstr ""
 
 #: ../../mayavi/docs/source/tvtk/README.txt:120
 msgid "To import tvtk please use::"
-msgstr ""
+msgstr "tvtkをインポートするには::"
 
 #: ../../mayavi/docs/source/tvtk/README.txt:124
 msgid ""
@@ -740,7 +740,7 @@ msgstr ""
 msgid ""
 "To summarize the considerations of the previous sub-section, the following "
 "are to be noted."
-msgstr ""
+msgstr "前のサブセクションの考察を要約するために、以下のことに留意さしてください。"
 
 #: ../../mayavi/docs/source/tvtk/README.txt:697
 msgid ""

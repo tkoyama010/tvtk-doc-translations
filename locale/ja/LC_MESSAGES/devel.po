@@ -128,6 +128,9 @@ msgid ""
 "calls TVTKBase.update_traits when the 'ModifiedEvent' is invoked.  Here is "
 "an example of a VTK observer callback::"
 msgstr ""
+"tvtkオブジェクトの非常に重要な特徴の1つは、オブジェクトのVTKに関連する特徴が、その背後にあるVTKオブジェクトが変更されると動的に更新されることです。これは、"
+" 'ModifiedEvent' が呼び出されたときに TVTKBase.update_traits "
+"を効果的に呼び出すVTKオブジェクトにオブザーバを追加することによって達成される。VTKオブザーバコールバックの例を次に示します。"
 
 #: ../../mayavi/docs/source/tvtk/devel.txt:67
 msgid ""
