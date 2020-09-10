@@ -80,7 +80,7 @@ msgstr "traits_ のサポート。"
 
 #: ../../mayavi/docs/source/tvtk/README.txt:23
 msgid "Elementary pickle support."
-msgstr ""
+msgstr "要素pickleのサポート。"
 
 #: ../../mayavi/docs/source/tvtk/README.txt:24
 msgid "Pythonic feel."
