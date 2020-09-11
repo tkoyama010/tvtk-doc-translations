@@ -88,7 +88,7 @@ msgstr ""
 
 #: ../../mayavi/docs/source/tvtk/README.txt:25
 msgid "Handles numpy arrays/Python lists transparently."
-msgstr ""
+msgstr "数値配列/Pythonリストを透過的に処理します。"
 
 #: ../../mayavi/docs/source/tvtk/README.txt:26
 msgid ""
