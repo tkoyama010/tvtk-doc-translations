@@ -165,11 +165,11 @@ msgstr ""
 msgid ""
 "While this whole process seems to be inefficient, it actually works quite "
 "well in practice and does not appear to be slow at all."
-msgstr ""
+msgstr "​このプロセス全体は効率的ではないように見えますが、実際には非常にうまく機能し、まったく遅くはないように見えます。"
 
 #: ../../mayavi/docs/source/tvtk/devel.txt:101
 msgid "Messaging"
-msgstr ""
+msgstr "メッセージング"
 
 #: ../../mayavi/docs/source/tvtk/devel.txt:103
 msgid ""
