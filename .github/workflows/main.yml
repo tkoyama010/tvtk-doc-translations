@@ -28,10 +28,26 @@ jobs:
       with:
         host: github.com
         private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-    - name: install
+    - name: Install Linux packages for Qt5 support
       run: |
+        sudo apt-get update
+        sudo apt-get install qt5-default
+        sudo apt-get install libxkbcommon-x11-0
+        sudo apt-get install libxcb-icccm4
+        sudo apt-get install libxcb-image0
+        sudo apt-get install libxcb-keysyms1
+        sudo apt-get install libxcb-randr0
+        sudo apt-get install libxcb-render-util0
+        sudo apt-get install libxcb-xinerama0
+    - name: Install dependencies and local packages
+      run: |
+        python -m pip install --upgrade pip setuptools wheel
+        python -m pip install pyqt5
+        python -m pip install numpy
+        python -m pip install vtk
+        python -m pip install pillow
+        python -m pip install nose
         (cd mayavi; git fetch origin; git checkout master; git reset --hard origin/master; git branch -a)
-        pip3 install -U pip setuptools==58.3.0
         pip3 install -r ./requirements.txt
     - name: update
       env:
