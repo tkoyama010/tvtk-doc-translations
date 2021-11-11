@@ -1,4 +1,5 @@
--e ./mayavi[app]
+-e ./mayavi
 sphinx-intl
 transifex-client
+vtk==9.0.3
 Sphinx>=4.3.0
