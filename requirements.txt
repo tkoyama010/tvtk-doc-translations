@@ -2,3 +2,4 @@
 sphinx-intl
 transifex-client
 vtk==9.0.1
+Sphinx>=4.3.0
