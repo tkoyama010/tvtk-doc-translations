@@ -34,9 +34,6 @@ def setup(app):
         objname="configuration value",
         indextemplate="pair: %s; configuration value",
     )
-    fdesc = GroupedField(
-        "parameter", label="Parameters", names=["param"], can_collapse=True
-    )
 
     # workaround for RTD
     from sphinx.util import logging
