@@ -12,6 +12,7 @@ This conf.py do:
 
 """
 import os
+
 from sphinx.util.pycompat import execfile_
 
 basedir = os.path.join(
