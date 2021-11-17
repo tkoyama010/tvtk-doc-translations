@@ -12,6 +12,7 @@ This conf.py do:
 
 """
 import os
+
 from sphinx.util.pycompat import execfile_
 
 basedir = os.path.join(
@@ -24,8 +25,6 @@ locale_dirs = [os.path.join(basedir, "../../../../locale/")]
 
 
 def setup(app):
-    from sphinx.util.docfields import GroupedField
-
     app.srcdir = basedir
     app.confdir = app.srcdir
     app.add_object_type(
@@ -33,9 +32,6 @@ def setup(app):
         "confval",
         objname="configuration value",
         indextemplate="pair: %s; configuration value",
-    )
-    fdesc = GroupedField(
-        "parameter", label="Parameters", names=["param"], can_collapse=True
     )
 
     # workaround for RTD
