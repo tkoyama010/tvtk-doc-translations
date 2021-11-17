@@ -24,8 +24,6 @@ locale_dirs = [os.path.join(basedir, "../../../../locale/")]
 
 
 def setup(app):
-    from sphinx.util.docfields import GroupedField
-
     app.srcdir = basedir
     app.confdir = app.srcdir
     app.add_object_type(
