@@ -5,7 +5,7 @@
 [![Documentation Status](https://readthedocs.org/projects/tvtk/badge/?version=latest)](https://tvtk.readthedocs.io/en/latest/?badge=latest) 
 :jp:
 [![Documentation Status](https://readthedocs.org/projects/tvtk/badge/?version=latest)](https://tvtk.readthedocs.io/ja/latest/?badge=latest) 
-[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)
 
 This is a project to provide tvtk official documentation with multiple versions and multiple languages on Read The Docs site.
 
