@@ -12,14 +12,13 @@ This conf.py do:
 
 """
 import os
-
-from sphinx.util.pycompat import execfile_
+import pathlib
 
 basedir = os.path.join(
     os.path.dirname(os.path.abspath(__file__)), "mayavi/docs/source/tvtk"
 )
 
-execfile_(os.path.join(basedir, "conf.py"), globals())
+exec(pathlib.Path(os.path.join(basedir, "conf.py")).read_text(), globals())
 
 locale_dirs = [os.path.join(basedir, "../../../../locale/")]
 
