@@ -14,15 +14,15 @@ conf.py files for each languages have 'language' and 'locale_dirs' values withou
 
 ## URLs
 
-* RTD project pages for Sphinx:
+- RTD project pages for Sphinx:
 
-  * https://readthedocs.org/projects/tvtk/  (Master)
-  * https://readthedocs.org/projects/tvtk-ja/
+  - https://readthedocs.org/projects/tvtk/ (Master)
+  - https://readthedocs.org/projects/tvtk-ja/
 
-* Documentation pages for each languages:
+- Documentation pages for each languages:
 
-  * https://tvtk.readthedocs.io/en/latest/
-  * https://tvtk.readthedocs.io/ja/latest/
+  - https://tvtk.readthedocs.io/en/latest/
+  - https://tvtk.readthedocs.io/ja/latest/
 
 ## How to setup a translated documentation project on RTD
 
@@ -30,10 +30,9 @@ Detail is here: https://docs.readthedocs.org/en/latest/localization.html#project
 
 Points are:
 
-* We must have RTD projects for each languages.
-* Each projects must have correct Language setting on "Settings" page.
-* Master project has connections to each translated projects on "translations settings" page.
-
+- We must have RTD projects for each languages.
+- Each projects must have correct Language setting on "Settings" page.
+- Master project has connections to each translated projects on "translations settings" page.
 
 ## How to update po files
 
@@ -42,7 +41,6 @@ sh ./locale/update.sh
 ```
 
 After that, you should commit updated po files.
-
 
 ## How to add a language
 
