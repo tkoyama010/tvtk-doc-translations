@@ -1,11 +1,8 @@
 # tvtk-doc.org on the Read The Docs.
 
-[![tvtk-auto-update](https://github.com/getfem-doc/tvtk-doc-translations/workflows/tvtk-auto-update/badge.svg)](https://github.com/getfem-doc/tvtk-doc-translations/actions)
-:us:
-[![Documentation Status](https://readthedocs.org/projects/tvtk/badge/?version=latest)](https://tvtk.readthedocs.io/en/latest/?badge=latest)
-:jp:
-[![Documentation Status](https://readthedocs.org/projects/tvtk/badge/?version=latest)](https://tvtk.readthedocs.io/ja/latest/?badge=latest)
-[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)
+[![tvtk-auto-update](https://github.com/tkoyama010/tvtk-doc-translations/workflows/tvtk-auto-update/badge.svg)](https://github.com/tkoyama010/tvtk-doc-translations/actions)
+English: [![Documentation Status](https://readthedocs.org/projects/tvtk/badge/?version=latest)](https://tvtk.readthedocs.io/en/latest/?badge=latest)
+日本語: [![Documentation Status](https://readthedocs.org/projects/tvtk-ja/badge/?version=latest)](https://tvtk-ja.readthedocs.io/ja/latest/?badge=latest)
 
 This is a project to provide tvtk official documentation with multiple versions and multiple languages on Read The Docs site.
 
