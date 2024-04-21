@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tvtk 4.8.2.dev0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-19 02:01+0000\n"
+"POT-Creation-Date: 2024-04-21 11:32+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -592,7 +592,7 @@ msgstr ""
 msgid "This module offers the following broad class of functionality:"
 msgstr ""
 
-#: ../../mayavi/docs/source/tvtk/README.txt:833
+#: ../../mayavi/docs/source/tvtk/README.txt:830
 msgid "`Figure`"
 msgstr ""
 
@@ -600,7 +600,7 @@ msgstr ""
 msgid "This basically manages all of the objects rendered.  Just like figure in any Matlab like environment.  A convenience function called `figure` may be used to create a nice Figure instance."
 msgstr ""
 
-#: ../../mayavi/docs/source/tvtk/README.txt:838
+#: ../../mayavi/docs/source/tvtk/README.txt:835
 msgid "`Glyphs`"
 msgstr ""
 
@@ -608,7 +608,7 @@ msgstr ""
 msgid "This and its subclasses let one place glyphs at points specified as inputs.  The subclasses are: `Arrows`, `Cones`, `Cubes`, `Cylinders`, `Spheres`, and `Points`."
 msgstr ""
 
-#: ../../mayavi/docs/source/tvtk/README.txt:841
+#: ../../mayavi/docs/source/tvtk/README.txt:840
 msgid "`Line3`"
 msgstr ""
 
@@ -616,7 +616,7 @@ msgstr ""
 msgid "Draws lines between the points specified at initialization time."
 msgstr ""
 
-#: ../../mayavi/docs/source/tvtk/README.txt:844
+#: ../../mayavi/docs/source/tvtk/README.txt:843
 msgid "`Outline`"
 msgstr ""
 
@@ -624,7 +624,7 @@ msgstr ""
 msgid "Draws an outline for the contained objects."
 msgstr ""
 
-#: ../../mayavi/docs/source/tvtk/README.txt:847
+#: ../../mayavi/docs/source/tvtk/README.txt:846
 msgid "`Title`"
 msgstr ""
 
@@ -632,7 +632,7 @@ msgstr ""
 msgid "Draws a title for the entire figure."
 msgstr ""
 
-#: ../../mayavi/docs/source/tvtk/README.txt:851
+#: ../../mayavi/docs/source/tvtk/README.txt:849
 msgid "`LUTBase`"
 msgstr ""
 
@@ -640,7 +640,7 @@ msgstr ""
 msgid "Manages a lookup table and a scalar bar (legend) for it.  This is subclassed by all classes that need a LUT."
 msgstr ""
 
-#: ../../mayavi/docs/source/tvtk/README.txt:855
+#: ../../mayavi/docs/source/tvtk/README.txt:853
 msgid "`SurfRegular`"
 msgstr ""
 
@@ -648,7 +648,7 @@ msgstr ""
 msgid "MayaVi1's `imv.surf` like functionality that plots surfaces given x (1D), y(1D) and z (or a callable) arrays."
 msgstr ""
 
-#: ../../mayavi/docs/source/tvtk/README.txt:858
+#: ../../mayavi/docs/source/tvtk/README.txt:857
 msgid "`SurfRegularC`"
 msgstr ""
 
@@ -656,7 +656,7 @@ msgstr ""
 msgid "Also plots contour lines."
 msgstr ""
 
-#: ../../mayavi/docs/source/tvtk/README.txt:861
+#: ../../mayavi/docs/source/tvtk/README.txt:860
 msgid "`TriMesh`"
 msgstr ""
 
@@ -664,7 +664,7 @@ msgstr ""
 msgid "Given triangle connectivity and points, plots a mesh of them."
 msgstr ""
 
-#: ../../mayavi/docs/source/tvtk/README.txt:864
+#: ../../mayavi/docs/source/tvtk/README.txt:863
 msgid "`FancyTriMesh`"
 msgstr ""
 
@@ -672,7 +672,7 @@ msgstr ""
 msgid "Plots the mesh using tubes and spheres so its fancier."
 msgstr ""
 
-#: ../../mayavi/docs/source/tvtk/README.txt:870
+#: ../../mayavi/docs/source/tvtk/README.txt:866
 msgid "`Mesh`"
 msgstr ""
 
@@ -680,7 +680,7 @@ msgstr ""
 msgid "Given x, y generated from `numpy.mgrid`, and a z to go with it. Along with optional scalars.  This class builds the triangle connectivity (assuming that x, y are from `numpy.mgrid`) and builds a mesh and shows it."
 msgstr ""
 
-#: ../../mayavi/docs/source/tvtk/README.txt:873
+#: ../../mayavi/docs/source/tvtk/README.txt:872
 msgid "`FancyMesh`"
 msgstr ""
 
@@ -688,7 +688,7 @@ msgstr ""
 msgid "Like mesh but shows the mesh using tubes and spheres."
 msgstr ""
 
-#: ../../mayavi/docs/source/tvtk/README.txt:877
+#: ../../mayavi/docs/source/tvtk/README.txt:875
 msgid "`Surf`"
 msgstr ""
 
@@ -696,7 +696,7 @@ msgstr ""
 msgid "This generates a surface mesh just like Mesh but renders the mesh as a surface."
 msgstr ""
 
-#: ../../mayavi/docs/source/tvtk/README.txt:880
+#: ../../mayavi/docs/source/tvtk/README.txt:879
 msgid "`Contour3`"
 msgstr ""
 
@@ -704,7 +704,7 @@ msgstr ""
 msgid "Shows contour for a mesh."
 msgstr ""
 
-#: ../../mayavi/docs/source/tvtk/README.txt:884
+#: ../../mayavi/docs/source/tvtk/README.txt:882
 msgid "`ImShow`"
 msgstr ""
 

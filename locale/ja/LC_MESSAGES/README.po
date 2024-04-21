@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tvtk 4.8.2.dev0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-19 02:01+0000\n"
+"POT-Creation-Date: 2024-04-21 08:54+0000\n"
 "PO-Revision-Date: 2020-05-29 23:27+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://app.transifex.com/tkoyama010/teams/110414/ja/)\n"
@@ -1046,7 +1046,7 @@ msgstr ""
 msgid "This module offers the following broad class of functionality:"
 msgstr "このモジュールは，次の幅広い機能クラスを提供します．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:833
+#: ../../mayavi/docs/source/tvtk/README.txt:830
 msgid "`Figure`"
 msgstr "`Figure`"
 
@@ -1059,7 +1059,7 @@ msgstr ""
 "これは基本的に，レンダリングされるすべてのオブジェクトを管理します．Matlabのような環境でのフィギュアのように． `figure` "
 "と呼ばれる便利な関数を使用して，素敵なFigureインスタンスを作成することができます．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:838
+#: ../../mayavi/docs/source/tvtk/README.txt:835
 msgid "`Glyphs`"
 msgstr "`Glyphs`"
 
@@ -1072,7 +1072,7 @@ msgstr ""
 "このクラスとそのサブクラスは，入力として指定された点にグリフを配置します．サブクラスは: `Arrows`, `Cones`, `Cubes`, "
 "`Cylinders`, `Spheres`, および `Points` です．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:841
+#: ../../mayavi/docs/source/tvtk/README.txt:840
 msgid "`Line3`"
 msgstr "`Line3`"
 
@@ -1080,7 +1080,7 @@ msgstr "`Line3`"
 msgid "Draws lines between the points specified at initialization time."
 msgstr "初期化時に指定した点の間に線分を描画します．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:844
+#: ../../mayavi/docs/source/tvtk/README.txt:843
 msgid "`Outline`"
 msgstr "`Outline`"
 
@@ -1088,7 +1088,7 @@ msgstr "`Outline`"
 msgid "Draws an outline for the contained objects."
 msgstr "含まれるオブジェクトのアウトラインを描画します．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:847
+#: ../../mayavi/docs/source/tvtk/README.txt:846
 msgid "`Title`"
 msgstr "`Title`"
 
@@ -1096,7 +1096,7 @@ msgstr "`Title`"
 msgid "Draws a title for the entire figure."
 msgstr "図形全体のタイトルを描画します．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:851
+#: ../../mayavi/docs/source/tvtk/README.txt:849
 msgid "`LUTBase`"
 msgstr "`LUTBase`"
 
@@ -1106,7 +1106,7 @@ msgid ""
 " by all classes that need a LUT."
 msgstr "ルックアップテーブルとそのスカラバー (凡例) を管理します．これはLUTを必要とするすべてのクラスによってサブクラス化されます．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:855
+#: ../../mayavi/docs/source/tvtk/README.txt:853
 msgid "`SurfRegular`"
 msgstr "`SurfRegular`"
 
@@ -1118,7 +1118,7 @@ msgstr ""
 "MayaVi1の `imv.surf` に似た機能で，x (1 D) ，y (1 D) ，z "
 "(または呼び出し可能)配列が指定されたサーフェスをプロットします．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:858
+#: ../../mayavi/docs/source/tvtk/README.txt:857
 msgid "`SurfRegularC`"
 msgstr "`SurfRegularC`"
 
@@ -1126,7 +1126,7 @@ msgstr "`SurfRegularC`"
 msgid "Also plots contour lines."
 msgstr "等高線もプリントされます．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:861
+#: ../../mayavi/docs/source/tvtk/README.txt:860
 msgid "`TriMesh`"
 msgstr "`TriMesh`"
 
@@ -1134,7 +1134,7 @@ msgstr "`TriMesh`"
 msgid "Given triangle connectivity and points, plots a mesh of them."
 msgstr "三角形の接続性と点を指定して，それらのメッシュをプロットします．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:864
+#: ../../mayavi/docs/source/tvtk/README.txt:863
 msgid "`FancyTriMesh`"
 msgstr "`FancyTriMesh`"
 
@@ -1142,7 +1142,7 @@ msgstr "`FancyTriMesh`"
 msgid "Plots the mesh using tubes and spheres so its fancier."
 msgstr "管と球体を使用してメッシュをプロットし，より華やかさを増します．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:870
+#: ../../mayavi/docs/source/tvtk/README.txt:866
 msgid "`Mesh`"
 msgstr "`Mesh`"
 
@@ -1155,7 +1155,7 @@ msgstr ""
 "`numpy.mgrid` から生成されたx, yとそれに付随するzを与えます．オプションのスカラーとともに．このクラスは，三角形の接続(x, yが "
 "`numpy.mgrid` のものであると仮定する)を構築し，メッシュを構築して表示します．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:873
+#: ../../mayavi/docs/source/tvtk/README.txt:872
 msgid "`FancyMesh`"
 msgstr "`FancyMesh`"
 
@@ -1163,7 +1163,7 @@ msgstr "`FancyMesh`"
 msgid "Like mesh but shows the mesh using tubes and spheres."
 msgstr "メッシュに似ていますが，チューブと球体を使用してメッシュを表示します．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:877
+#: ../../mayavi/docs/source/tvtk/README.txt:875
 msgid "`Surf`"
 msgstr "`Surf`"
 
@@ -1173,7 +1173,7 @@ msgid ""
 "surface."
 msgstr "Meshと同様にサーフェスメッシュが生成されますが，メッシュはサーフェスとしてレンダリングされます．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:880
+#: ../../mayavi/docs/source/tvtk/README.txt:879
 msgid "`Contour3`"
 msgstr "`Contour3`"
 
@@ -1181,7 +1181,7 @@ msgstr "`Contour3`"
 msgid "Shows contour for a mesh."
 msgstr "メッシュのコンターを表示します．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:884
+#: ../../mayavi/docs/source/tvtk/README.txt:882
 msgid "`ImShow`"
 msgstr "`ImShow`"
 
