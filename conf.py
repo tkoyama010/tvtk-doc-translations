@@ -25,7 +25,6 @@ def setup(app):  # noqa: D103,ANN001,ANN201
 
     app.srcdir = Path(basedir)
     app.confdir = Path(app.srcdir)
-    app.connect("autodoc-process-docstring", cut_lines(4, what=["module"]))
     app.add_object_type(
         "confval",
         "confval",
