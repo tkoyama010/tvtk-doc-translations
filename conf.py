@@ -21,7 +21,6 @@ locale_dirs = [basedir / "../../../../locale/"]
 
 
 def setup(app):  # noqa: D103,ANN001,ANN201
-    from sphinx.ext.autodoc import cut_lines
 
     app.srcdir = Path(basedir)
     app.confdir = Path(app.srcdir)
