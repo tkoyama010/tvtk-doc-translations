@@ -9,7 +9,7 @@ For example::
 This conf.py do:
 
 - Specify `locale_dirs` and `gettext_compact`.
-- Overrides source directory as 'tvtk/docs/source/tvtk`.
+- Overrides source directory as 'mayavi/docs/source/tvtk`.
 
 """
 from pathlib import Path
