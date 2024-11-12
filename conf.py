@@ -1,6 +1,7 @@
 # basedir is set by <lang>/conf.py
 """
 Use "-D language=<LANG>" option to build a localized tvtk document.
+
 For example::
 
     sphinx-build -D language=ja -b html . _build/html
@@ -11,21 +12,18 @@ This conf.py do:
 - Overrides source directory as 'mayavi/docs/source/tvtk`.
 
 """
-import os
-import pathlib
+from pathlib import Path
 
-basedir = os.path.join(
-    os.path.dirname(os.path.abspath(__file__)), "mayavi/docs/source/tvtk"
-)
+basedir = Path(__file__).resolve().parent / "mayavi/docs/source/tvtk"
+exec((basedir / "conf.py").read_text(), globals())  # noqa: S102
 
-exec(pathlib.Path(os.path.join(basedir, "conf.py")).read_text(), globals())
-
-locale_dirs = [os.path.join(basedir, "../../../../locale/")]
+locale_dirs = [basedir / "../../../../locale/"]
 
 
-def setup(app):
-    app.srcdir = basedir
-    app.confdir = app.srcdir
+def setup(app):  # noqa: D103,ANN001,ANN201
+
+    app.srcdir = Path(basedir)
+    app.confdir = Path(app.srcdir)
     app.add_object_type(
         "confval",
         "confval",
