@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tvtk 4.8.3.dev0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-24 00:24+0000\n"
+"POT-Creation-Date: 2024-12-19 00:31+0000\n"
 "PO-Revision-Date: 2020-05-29 23:27+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://app.transifex.com/tkoyama010/teams/110414/ja/)\n"
@@ -413,18 +413,14 @@ msgstr ""
 #: ../../mayavi/docs/source/tvtk/README.txt:272
 msgid ""
 "Thus, after `o` is garbage collected `m.input` no longer refers to the "
-"original tvtk object and a new one is created.  This is very similar to "
-"VTK's behaviour.  Changing this behaviour is tricky and there are no plans "
-"currently to change this."
+"original tvtk object the old one is cached and returned."
 msgstr ""
-"したがって， `o` がガベージコレクションされた後， `m.input` "
-"はもはや元のtvtkオブジェクトを参照せず，新しいものが作成されます．これはVTKの動作とよく似ています．この動作を変更するのは難しく，現在のところこれを変更する計画はありません．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:279
+#: ../../mayavi/docs/source/tvtk/README.txt:277
 msgid "tvtk and traits"
 msgstr "tvtkとtrait"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:281
+#: ../../mayavi/docs/source/tvtk/README.txt:279
 msgid ""
 "All tvtk objects are derived from `traits.HasStrictTraits`.  As discussed "
 "above, all the basic state related methods are represented as traits in "
@@ -433,13 +429,13 @@ msgstr ""
 "すべてのtvtkオブジェクトは `traits.HasStrictTraits` "
 "から派生します．前述したように，基本的な状態関連メソッドはすべてtvtkの特性として表されます．これが，次の操作を実行できる理由です．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:292
+#: ../../mayavi/docs/source/tvtk/README.txt:290
 msgid ""
 "Also note that it is possible to set many properties of a tvtk object in one"
 " go using the `set` method.  For example::"
 msgstr "また， `set` メソッドを使用して，tvtkオブジェクトの多くのプロパティを一度に設定することができることにも注意してください．例::"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:298
+#: ../../mayavi/docs/source/tvtk/README.txt:296
 msgid ""
 "Any tvtk object will automatically provide the basic functionality of a "
 "traited class.  Thus, one can also pop up a standard GUI editor for any tvtk"
@@ -451,7 +447,7 @@ msgstr ""
 " `pycrust` を使っているか， `gui_thread`  ( SciPy_ がインストールされている場合は，このモジュールを使用できます．)か"
 " `ipython -wthread` を使っているなら，これは簡単にできます::"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:309
+#: ../../mayavi/docs/source/tvtk/README.txt:307
 msgid ""
 "A GUI editor should pop-up at this point.  Note, that changes made to the "
 "trait will automagically be propagated to the underlying VTK object.  Most "
@@ -461,7 +457,7 @@ msgid ""
 msgstr ""
 "この時点でGUIエディタがポップアップ表示されます．traitに加えられた変更は，自動的に配下のVTKオブジェクトに伝播されることに注意してください．最も重要なのは，その逆も正しいということです．つまり，他のオブジェクトがラップされたVTKオブジェクトの基本状態を変更すると，traitは自動的に更新されます．例::"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:323
+#: ../../mayavi/docs/source/tvtk/README.txt:321
 msgid ""
 "This also means that if you change properties of the object on the "
 "interpreter and at the same time are using a GUI editor, if the object "
@@ -469,7 +465,7 @@ msgid ""
 msgstr ""
 "また，インタープリターでオブジェクトのプロパティーを変更し，同時にGUIエディターを使用している場合，オブジェクトが変更されると，GUIエディターが自動的に更新されます．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:327
+#: ../../mayavi/docs/source/tvtk/README.txt:325
 msgid ""
 "It is important to note that tvtk objects have strict traits.  It is "
 "therefore an error to set an attribute that is not already defined in the "
@@ -477,33 +473,33 @@ msgid ""
 msgstr ""
 "tvtkオブジェクトには厳密な特性があることに注意してください．したがって，クラスでまだ定義されていない属性を設定するとエラーになります．これを次の例に示します．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:343
+#: ../../mayavi/docs/source/tvtk/README.txt:341
 msgid "Sub-classing tvtk classes"
 msgstr "サブクラス化tvtkクラス"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:345
+#: ../../mayavi/docs/source/tvtk/README.txt:343
 msgid "You may subclass tvtk classes but please keep in mind the following:"
 msgstr "tvtkクラスをサブクラス化することもできますが，以下の点に注意してください．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:347
+#: ../../mayavi/docs/source/tvtk/README.txt:345
 msgid "All tvtk classes derive from `HasStrictTraits`."
 msgstr "すべてのtvtkクラスは `HasStrictTraits` から派生します．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:349
+#: ../../mayavi/docs/source/tvtk/README.txt:347
 msgid "You must make sure to call the super class's __init__ correctly."
 msgstr "必ずスーパークラスの __init__ を正しく呼び出してください．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:351
+#: ../../mayavi/docs/source/tvtk/README.txt:349
 msgid ""
 "If you have to override the __del__ method, you *must* make sure you call "
 "the super class's __del__ method."
 msgstr "__del__ メソッドをオーバーライドする必要がある場合は，スーパークラスの __del__ メソッドを呼び出す *必要* があります．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:357
+#: ../../mayavi/docs/source/tvtk/README.txt:355
 msgid "Pickling tvtk objects"
 msgstr "tvtkオブジェクトの選択"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:359
+#: ../../mayavi/docs/source/tvtk/README.txt:357
 msgid ""
 "tvtk objects support a simple form of pickling.  The state_ of the tvtk "
 "object maybe pickled.  The references to other VTK objects held by the "
@@ -512,7 +508,7 @@ msgstr ""
 "tvtkオブジェクトは単純な形式のピクルをサポートしています．tvtkオブジェクトのstate_はpickle化されている可能性があります．オブジェクトが保持する他のVTKオブジェクトへの参照は，選択"
 " *できません* ．例 ::"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:372
+#: ../../mayavi/docs/source/tvtk/README.txt:370
 msgid ""
 "Once again, only the state_ of the object is pickled.  Internal references "
 "are not.  So the construction of the VTK pipeline will not be pickled.  For "
@@ -526,7 +522,7 @@ msgstr ""
 "セクションで与えられた例からアクターをpickleした場合， `ConeSource` ， `PolyDataMapper` などはピクルスされません．"
 " `Matrix4x4` のようなtvtkクラスの中には，より良いpickleを可能にする特別なコードを持っているものもあります．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:379
+#: ../../mayavi/docs/source/tvtk/README.txt:377
 msgid ""
 "It is also possible to set the state of a live object.  Normally, "
 "`pickle.load` will create a new object.  However, by using `__setstate__` "
@@ -536,17 +532,17 @@ msgstr ""
 "ライブオブジェクトの状態を設定することもできます．通常， `pickle.load` は新しいオブジェクトを作成します．しかし， "
 "`__setstate__` を直接使用することで，オブジェクトの state_ を更新するだけで済みます．例えば::"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:391
+#: ../../mayavi/docs/source/tvtk/README.txt:389
 msgid ""
 "Here, after `__setstate__` is called, the object's state alone will be "
 "updated.  No new object is created."
 msgstr "ここで， `__setstate__` が呼ばれた後，オブジェクトの状態だけが更新されます．新しいオブジェクトは作成されません．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:396
+#: ../../mayavi/docs/source/tvtk/README.txt:394
 msgid "Docstrings"
 msgstr "Docstrings"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:398
+#: ../../mayavi/docs/source/tvtk/README.txt:396
 msgid ""
 "All tvtk methods and traits are documented using the VTK docstrings. The "
 "class names and method names are changed suitably as mentioned in the `Basic"
@@ -557,11 +553,11 @@ msgstr ""
 "すべてのtvtkメソッドとtraitは，VTKのdocstringを使って文書化されています．クラス名とメソッド名は， `Basic Usage`_ "
 "セクションで述べられているように，適切に変更されます．これらのdocstringは自動的に生成されるので，多少の誤りがあるかもしれません．tvtkオブジェクトのすべてのメソッドは，docstring内のメソッドシグネチャ情報も提供します．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:407
+#: ../../mayavi/docs/source/tvtk/README.txt:405
 msgid "User defined code"
 msgstr "ユーザ定義コード"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:409
+#: ../../mayavi/docs/source/tvtk/README.txt:407
 msgid ""
 "All the tvtk wrapper classes are generated automatically.  Sometimes one "
 "would like to customize a particular class and use that instead of the "
@@ -576,11 +572,11 @@ msgstr ""
 "ファイルから関連するクラスをコピーし，それを適切に変更し(もちろんファイル名やクラス名は変更せずに)，そしてこのファイルを `tvtk/custom` "
 "ディレクトリに追加することです．ここにあるファイルは，ZIPファイル内のデフォルトをオーバーライドします．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:419
+#: ../../mayavi/docs/source/tvtk/README.txt:417
 msgid "Collections"
 msgstr "Collections"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:421
+#: ../../mayavi/docs/source/tvtk/README.txt:419
 msgid ""
 "Any object derived from `Collection` (i.e. `vtkCollection`) will behave like"
 " a proper Python sequence.  Here is an example::"
@@ -588,15 +584,15 @@ msgstr ""
 "`Collection` (例: "
 "`vtkCollection`)から派生したオブジェクトは，適切なPythonシーケンスのように動作します．次に例を示します．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:439
+#: ../../mayavi/docs/source/tvtk/README.txt:437
 msgid "Currently, only subclasses of `Collection` behave this way."
 msgstr "現在， `Collection` のサブクラスだけがこのように振る舞います．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:443
+#: ../../mayavi/docs/source/tvtk/README.txt:441
 msgid "Array handling"
 msgstr "配列の処理"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:445
+#: ../../mayavi/docs/source/tvtk/README.txt:443
 msgid ""
 "All the `DataArray` subclasses behave like Pythonic arrays and support the "
 "iteration protocol in addition to `__getitem__`, `__setitem__`, `__repr__`, "
@@ -617,7 +613,7 @@ msgstr ""
 "`from_array` および `to_array` メソッドのみを提供し，直列型プロトコルは提供しません．これは，ラップされた "
 "`vtkCellArray` クラスの特性によるものです．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:457
+#: ../../mayavi/docs/source/tvtk/README.txt:455
 msgid ""
 "One extremely useful feature is that almost any tvtk method/property that "
 "accepts a `DataArray`, `Points`, `IdList` or `CellArray` instance, will "
@@ -627,7 +623,7 @@ msgstr ""
 "非常に便利な機能の1つは， `DataArray` ， `Points` ， `IdList` ，または `CellArray` "
 "インスタンスを受け入れるほとんどすべてのtvtkメソッド/プロパティが，多数の配列またはPythonリストを透過的に受け入れることです．次に，これらを示す簡単な例を示します．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:497
+#: ../../mayavi/docs/source/tvtk/README.txt:495
 msgid ""
 "As can be seen, no `DataArray`, `Points` or `CellArray` instances need to be"
 " created.  Note that Python tuples are *not* converted implicitly.  The "
@@ -641,7 +637,7 @@ msgstr ""
 "ことに注意してください．渡されたアレイからVTKアレイへの変換は，透過的かつ非常に効率的に処理されます．この唯一の例外は，変換が非効率的な "
 "`IdList` クラスです．ただし， `IdList` クラスは一般的には使用されません．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:505
+#: ../../mayavi/docs/source/tvtk/README.txt:503
 msgid ""
 "The `CellArray` is used to specify the connectivity list for polygonal data "
 "and has some peculiarities.  The `CellArray` needs to be initialized using "
@@ -650,7 +646,7 @@ msgstr ""
 "`CellArray` は，ポリゴンデータの接続リストを指定するために使用され，いくつかの特殊性があります． `CellArray` "
 "は，セル接続リストを使用して初期化する必要があります．これは，いくつかの方法のいずれかで指定できます．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:510
+#: ../../mayavi/docs/source/tvtk/README.txt:508
 msgid ""
 "A Python list of 1D lists.  Each 1D list can contain one cell connectivity "
 "list.  This is very slow and is to be used only when efficiency is of no "
@@ -659,11 +655,11 @@ msgstr ""
 "1 DリストのPythonリスト．各1 "
 "Dリストには，1つのセル接続リストを含めることができます．これは非常に遅く，効率性に問題がない場合にのみ使用します．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:514
+#: ../../mayavi/docs/source/tvtk/README.txt:512
 msgid "A 2D numpy array with the cell connectivity list."
 msgstr "セル接続リストを持つ2 D数値配列．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:516
+#: ../../mayavi/docs/source/tvtk/README.txt:514
 msgid ""
 "A Python list of 2D numpy arrays.  Each numpy array can have a different "
 "shape.  This makes it easy to generate a cell array having cells of "
@@ -672,7 +668,7 @@ msgstr ""
 "2 "
 "D数値配列のPythonリスト．各数値配列は異なる形を持つことができます．これにより，異なる種類のセルを有するセル配列を容易に生成することができます．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:520
+#: ../../mayavi/docs/source/tvtk/README.txt:518
 msgid ""
 "This conversion is most efficient if the passed numpy arrays have a typecode"
 " of `tvtk.array_handler.ID_TYPE_CODE`.  Otherwise a typecast is necessary "
@@ -684,19 +680,19 @@ msgstr ""
 "の場合に最も効率的です．それ以外の場合は型キャストが必要で，これには余分なコピーが必要になります．変換中は，入力データは *常にコピー* "
 "されます．次に，これらのさまざまなアプローチを説明する例を示します．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:535
+#: ../../mayavi/docs/source/tvtk/README.txt:533
 msgid ""
 "An alternative way to use an arbitrary connectivity list having different "
 "numbers of points per cell is to use the following approach::"
 msgstr "セルごとに異なるポイント数を持つ任意の接続リストを使用する別の方法は，次の方法を使用することです．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:550
+#: ../../mayavi/docs/source/tvtk/README.txt:548
 msgid ""
 "This is done very efficiently and does not copy the input data.  More "
 "details on this are provided in the next sub-section."
 msgstr "これは非常に効率的に行われ，入力データをコピーしません．詳細については，次のサブセクションで説明します．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:554
+#: ../../mayavi/docs/source/tvtk/README.txt:552
 msgid ""
 "Also note that `DataArray` objects can still be passed to these methods as "
 "before.  For example we could have just as easily done this::"
@@ -704,17 +700,17 @@ msgstr ""
 "また， `DataArray` "
 "オブジェクトは以前と同様にこれらのメソッドに渡すことができることに注意してください．たとえば，これも同じくらい簡単にできます．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:571
+#: ../../mayavi/docs/source/tvtk/README.txt:569
 msgid "Important considerations"
 msgstr "重要な考慮事項"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:573
+#: ../../mayavi/docs/source/tvtk/README.txt:571
 msgid ""
 "To clarify the ensuing discussion we make a distinction between two "
 "different forms of array handling."
 msgstr "次に説明する内容を明確にするために，2つの異なる形式の配列処理を区別します．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:576
+#: ../../mayavi/docs/source/tvtk/README.txt:574
 msgid ""
 "Explicit conversion -- These happen when the user is creating a tvtk array "
 "object and initializes this from a numpy array or Python list.  Like so::"
@@ -722,7 +718,7 @@ msgstr ""
 "明示的な変換 -- "
 "これは，ユーザがtvtk配列オブジェクトを作成していて，これを数値配列またはPythonリストから初期化するときに発生します．以下のようになります::"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:584
+#: ../../mayavi/docs/source/tvtk/README.txt:582
 msgid ""
 "Implicit conversion -- These happen when the user passes an array or list to"
 " a tvtk method that expects a `DataArray`, `Points`, `IdList` or `CellArray`"
@@ -731,7 +727,7 @@ msgstr ""
 "暗黙的変換 -- これは， `DataArray` ， `Points` ， `IdList` ，または `CellArray` "
 "インスタンスを想定しているtvtkメソッドに配列またはリストを渡すときに発生します．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:589
+#: ../../mayavi/docs/source/tvtk/README.txt:587
 msgid ""
 "There are a few issues to keep in mind when using tvtk's array handling "
 "features.  When possible, tvtk uses a view of the passed numpy array and "
@@ -741,7 +737,7 @@ msgid ""
 msgstr ""
 "tvtkの配列処理機能を使用する際に注意すべき点がいくつかあります．可能な場合，tvtkは渡されたnumpy配列のビューを使用し，そこに格納されているデータのコピーを作成しません．つまり，VTKデータ配列またはnumpy配列への変更は，もう一方の配列にも反映されます．例::"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:605
+#: ../../mayavi/docs/source/tvtk/README.txt:603
 msgid ""
 "It is important to note that it is perfectly safe to delete the reference to"
 " the numpy array since this array is actually cached safely to eliminate "
@@ -751,7 +747,7 @@ msgid ""
 msgstr ""
 "注意すべき重要な点は，numpy配列への参照を削除してもまったく安全だということです．なぜなら，この配列は実際には安全にキャッシュされ，厄介な問題を回避できるからです．このメモリは，VTKアレイがガベージコレクションされると解放されます．numpy配列への参照を保存すると，numpy配列のサイズを変更できなくなります(これは破滅的な影響を及ぼす可能性がある)．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:612
+#: ../../mayavi/docs/source/tvtk/README.txt:610
 msgid ""
 "However, there are exceptions to this behaviour of using \"views\" of the "
 "numpy array.  The `DataArray` class and its subclasses and the `Points` "
@@ -760,21 +756,21 @@ msgstr ""
 "しかし，numpy配列の \"views\" を使用するこの動作には例外があります． `DataArray` クラスとそのサブクラス，および "
 "`Points` クラスは，次の状況でのみ，指定されたデータのコピーを作成します．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:617
+#: ../../mayavi/docs/source/tvtk/README.txt:615
 msgid "A Python list is given as the data."
 msgstr "Pythonリストがデータとして与えられます．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:619
+#: ../../mayavi/docs/source/tvtk/README.txt:617
 msgid "A non-contiguous numpy array is given."
 msgstr "連続しないnumpy配列が与えられます．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:621
+#: ../../mayavi/docs/source/tvtk/README.txt:619
 msgid ""
 "The method requiring the conversion of the array to a VTK array expects a "
 "`vtkBitArray` instance."
 msgstr "配列をVTK配列に変換する必要があるメソッドは， `vtkBitArray` インスタンスを想定しています．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:624
+#: ../../mayavi/docs/source/tvtk/README.txt:622
 msgid ""
 "The types of the expected VTK array and the passed numpy array are not "
 "equivalent to each other.  For example if the array passed has typecode 'i' "
@@ -783,7 +779,7 @@ msgstr ""
 "予想されるVTK配列と渡されたnumpy配列の型は，互いに等価ではありません．例えば，渡された配列の型コードが 'i' で，tvtkメソッドが "
 "`FloatArray` を期待している場合です．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:630
+#: ../../mayavi/docs/source/tvtk/README.txt:628
 msgid ""
 "The cases 3 and 4 occur very rarely in implicit conversions because most "
 "methods accept `DataArray` instances rather than specific subclasses.  "
@@ -792,12 +788,12 @@ msgstr ""
 "ほとんどのメソッドは特定のサブクラスではなく `DataArray`  "
 "インスタンスを受け入れるため，ケース3および4が暗黙的な変換で発生することは非常にまれです．ただし，これらのケースは明示的な変換で発生する可能性があります．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:635
+#: ../../mayavi/docs/source/tvtk/README.txt:633
 msgid ""
 "`CellArray` *always* makes a copy of the data on assignment.  For example::"
 msgstr "`CellArray` は *常に* アサインされたデータのコピーを作成します．例えば::"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:643
+#: ../../mayavi/docs/source/tvtk/README.txt:641
 msgid ""
 "This always makes a copy.  However, if one uses the `set_cells` method a "
 "copy is made in the same circumstances as specified above for `DataArray` "
@@ -808,7 +804,7 @@ msgstr ""
 "クラスに対して上で指定したのと同じ状況でコピーが作られます．コピーが作成されない場合，セルデータはnumpy配列の \"view\" "
 "になります．したがって，次の例ではコピーは作成されません．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:656
+#: ../../mayavi/docs/source/tvtk/README.txt:654
 msgid ""
 "Changing the values of the ids or changing the number of cells is *not* "
 "recommended and will lead to undefined behaviour.  It should also be noted "
@@ -820,17 +816,17 @@ msgstr ""
 "`tvtk.array_handler.ID_TYPE_CODE`  "
 "(これは実際にはVTKのビルドとプラットフォームに応じて動的に計算されます．)を有する配列で渡すのが最良であることに留意されたい．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:663
+#: ../../mayavi/docs/source/tvtk/README.txt:661
 msgid "The `IdList` also *always* makes a copy of the data passed to it."
 msgstr "`IdList` はまた，渡されたデータのコピーを *常に* 作成します．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:666
+#: ../../mayavi/docs/source/tvtk/README.txt:664
 msgid ""
 "Another issue to keep in mind is that VTK's data arrays always re-allocate "
 "memory if they are resized.  This is illustrated in the following example::"
 msgstr "留意すべきもう1つの問題は，VTKのデータ配列がサイズ変更されると常にメモリーを再割り当てすることです．これを次の例に示します．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:682
+#: ../../mayavi/docs/source/tvtk/README.txt:680
 msgid ""
 "In this case, `a` is not resized but `d` is.  Here, `d` actually makes a "
 "copy of `a` and any further changes to `d` or `a` will not be reflected in "
@@ -845,17 +841,17 @@ msgstr ""
 "への参照を内部的に保持します．幸い， `d` がガーベッジ・コレクションされると， `a` "
 "が占有していたメモリーが解放されます．したがって，この問題は深刻ではありませんが，覚えておく価値はあるでしょう．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:692
+#: ../../mayavi/docs/source/tvtk/README.txt:690
 msgid "Summary of issues"
 msgstr "問題の概要"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:694
+#: ../../mayavi/docs/source/tvtk/README.txt:692
 msgid ""
 "To summarize the considerations of the previous sub-section, the following "
 "are to be noted."
 msgstr "前のサブセクションの考察を要約するために，以下のことに留意さしてください．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:697
+#: ../../mayavi/docs/source/tvtk/README.txt:695
 msgid ""
 "Most often `DataArray` and `Points` objects do not make copies of the numpy "
 "data.  The exceptions are listed above.  This means changes to either the "
@@ -864,13 +860,13 @@ msgstr ""
 "ほとんどの場合， `DataArray` と `Points` "
 "オブジェクトは多くのデータのコピーを作りません．例外は上記のとおりです．つまり，tvtkオブジェクトまたは配列に対する変更は，もう一方に反映されます．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:702
+#: ../../mayavi/docs/source/tvtk/README.txt:700
 msgid ""
 "It is safe to delete references to the array object converted. You cannot "
 "resize the numpy array though."
 msgstr "変換された配列オブジェクトへの参照を削除しても安全です．ただし，numpy配列のサイズは変更できません．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:705
+#: ../../mayavi/docs/source/tvtk/README.txt:703
 msgid ""
 "`CellArray` always copies data on assignment.  However, when using "
 "`set_cells`, the behaviour is similar to what happens for `DataArray` "
@@ -886,12 +882,12 @@ msgstr ""
 "のタイプコードを持つ多数の配列の形式でデータを渡すのが最適であることにも注意してください) "
 "．そうでなければ，型キャストのために余分なコピーが発生します．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:714
+#: ../../mayavi/docs/source/tvtk/README.txt:712
 msgid ""
 "`IdList` always makes a copy of the data.  This class is very rarely used."
 msgstr "`IdList` は常にデータのコピーを作成します．このクラスはほとんど使用されません．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:717
+#: ../../mayavi/docs/source/tvtk/README.txt:715
 msgid ""
 "tvtk array objects *always* copy the data when resized.  This could lead to "
 "increased memory usage in some circumstances. However, this is *not* a "
@@ -900,28 +896,28 @@ msgstr ""
 "tvtk配列オブジェクトは，サイズ変更時に *常に* "
 "データをコピーします．これにより，状況によってはメモリ使用量が増加する可能性があります．ただし，これはメモリリークでは *ありません* ．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:722
+#: ../../mayavi/docs/source/tvtk/README.txt:720
 msgid ""
 "The upshot of these features is that array conversion can be extremely "
 "efficient in terms of speed and memory considerations."
 msgstr "これらの機能の結果として，配列変換は速度とメモリの点で非常に効率的になります．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:727
+#: ../../mayavi/docs/source/tvtk/README.txt:725
 msgid "Other utility modules"
 msgstr "その他のユーティリティモジュール"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:729
+#: ../../mayavi/docs/source/tvtk/README.txt:727
 msgid ""
 "The `tvtk` package ships with several other utility modules.  These are "
 "briefly described in the following sections."
 msgstr ""
 "`tvtk` パッケージには，他にもいくつかのユーティリティモジュールが付属しています．これらについては，以降のセクションで簡単に説明します．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:733
+#: ../../mayavi/docs/source/tvtk/README.txt:731
 msgid "Miscellaneous"
 msgstr "その他"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:735
+#: ../../mayavi/docs/source/tvtk/README.txt:733
 msgid ""
 "If you need to write out VTK data files given a TVTK dataset.  The "
 "``tvtk.api.write_data`` function should be useful.  For example::"
@@ -929,34 +925,34 @@ msgstr ""
 "TVTKデータセットを指定してVTKデータファイルを書き出す必要がある場合． ``tvtk.api.write_data`` "
 "機能が役に立つはずです．例::"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:743
+#: ../../mayavi/docs/source/tvtk/README.txt:741
 msgid ""
 "This will write out an XML file with basename ``file_name``.  If one "
 "specifies a ``.vtk`` extension, like say::"
 msgstr ""
 "これは，ベース名が ``file_name`` のXMLファイルを書き出します． ``.vtk`` 拡張子を指定する場合は，次のようになります．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:748
+#: ../../mayavi/docs/source/tvtk/README.txt:746
 msgid ""
 "It will write out an old-style ASCII file.  See the docstring for more "
 "details."
 msgstr "古いスタイルのASCIIファイルを書き出します．詳細については，docstringを参照してください．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:750
+#: ../../mayavi/docs/source/tvtk/README.txt:748
 msgid ""
 "VTK-Python defines several handy colors and these are made available in "
 "TVTK. For example::"
 msgstr "VTK-Pythonではいくつかの便利な色が定義されており，TVTKで使用できるようになっています．例::"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:757
+#: ../../mayavi/docs/source/tvtk/README.txt:755
 msgid "This allows you to refer to color by name easily."
 msgstr "これにより，色を名前で簡単に参照できます．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:760
+#: ../../mayavi/docs/source/tvtk/README.txt:758
 msgid "`pipeline.browser`"
 msgstr "`pipeline.browser`"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:762
+#: ../../mayavi/docs/source/tvtk/README.txt:760
 msgid ""
 "The `PipelineBrowser` class presents the view of the VTK pipeline as a tree."
 "  Double-clicking any node will let you edit the properties of the object "
@@ -971,7 +967,7 @@ msgstr ""
 " `TreeEditor` は，ビューを表すために使用されます．このパイプラインブラウザはMayaVi_の (1.x) "
 "パイプラインブラウザに似ていますが，MayaVi_のパイプラインブラウザよりも洗練されています．VTKパイプラインを変更すると，ほとんどの場合，ブラウザーは自動的に更新されます．表示されない場合は，任意のノードを右クリックして更新をクリックします．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:771
+#: ../../mayavi/docs/source/tvtk/README.txt:769
 msgid ""
 "The algorithm to generate the objects in the tree can be changed.  The user "
 "may subclass `TreeGenerator` and use that instead.  Please read the code and"
@@ -980,11 +976,11 @@ msgstr ""
 "ツリー内のオブジェクトを生成するアルゴリズムを変更できます．ユーザは `TreeGenerator` "
 "をサブクラス化して，代わりにそれを使うかもしれません．実装の詳細については，コードとdocstringを参照してください．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:779
+#: ../../mayavi/docs/source/tvtk/README.txt:777
 msgid "`tools.ivtk`"
 msgstr "`tools.ivtk`"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:781
+#: ../../mayavi/docs/source/tvtk/README.txt:779
 msgid ""
 "A utility module that makes VTK/TVTK easier to use from the Python "
 "interpreter.  The module uses the `tvtk.scene` module to provide a wxPython "
@@ -994,7 +990,7 @@ msgstr ""
 "PythonインタプリタからVTK/TVTKを簡単に使用できるようにするユーティリティー・モジュール．モジュールは `tvtk.scene` "
 "モジュールを使用してwxPythonウィジェットを提供します．ivtkは基本的に，このシーンをオプションのPythonインタープリター(PyCrust経由)およびオプションのパイプラインブラウザービューとともに提供します．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:787
+#: ../../mayavi/docs/source/tvtk/README.txt:785
 msgid ""
 "For a stand-alone application one may simply run the module.  To use this "
 "under IPython_ (with -wthread) use the `viewer()` helper function.  For "
@@ -1003,7 +999,7 @@ msgstr ""
 "スタンドアロンのアプリケーションでは，モジュールを実行するだけでよい． IPython_  (with-"
 "wthreadを指定した場合)でこれを使うためには， `viewer()` ヘルパー関数を使います．例::"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:800
+#: ../../mayavi/docs/source/tvtk/README.txt:798
 msgid ""
 "ivtk provides several useful classes that you may use from either PyFace or "
 "wxPython -- `IVTK`, `IVTKWithCrust`, `IVTKWithBrowser` and "
@@ -1015,11 +1011,11 @@ msgstr ""
 "`IVTKWithBrowser` ，および `IVTKWithCrustAndBrowser` が用意されています．ivtkの使用例は "
 "`examples/ivtk_example.py` にもあります．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:810
+#: ../../mayavi/docs/source/tvtk/README.txt:808
 msgid "`tools.mlab`"
 msgstr "`tools.mlab`"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:812
+#: ../../mayavi/docs/source/tvtk/README.txt:810
 msgid ""
 "A module that provides Matlab-like 3d visualization functionality. The "
 "general idea is shamelessly stolen from the `high-level API`_ provided by "
@@ -1028,7 +1024,7 @@ msgstr ""
 "Matlabのような3 D可視化機能を提供するモジュール．一般的なアイデアは，恥知らずにも Octaviz_ が提供する `高水準 API`_ "
 "から盗用されています．いくつかのテストケースやデモもそこから翻訳されています!"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:820
+#: ../../mayavi/docs/source/tvtk/README.txt:818
 msgid ""
 "The implementation provided here is object oriented and each visualization "
 "capability is implemented as a class that has traits. So each of these may "
@@ -1042,15 +1038,15 @@ msgstr ""
 "MLabBaseから派生します．MLabBaseは，レンダウィンドウにアクターを追加または削除する役割を果たします．すべてのクラスで，RenderWindowが"
 " `tvtk.scene.Scene` インスタンス(この制約は後で必要に応じて緩和することができる)であることが必要です．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:828
+#: ../../mayavi/docs/source/tvtk/README.txt:826
 msgid "This module offers the following broad class of functionality:"
 msgstr "このモジュールは，次の幅広い機能クラスを提供します．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:830
+#: ../../mayavi/docs/source/tvtk/README.txt:828
 msgid "`Figure`"
 msgstr "`Figure`"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:831
+#: ../../mayavi/docs/source/tvtk/README.txt:829
 msgid ""
 "This basically manages all of the objects rendered.  Just like figure in any"
 " Matlab like environment.  A convenience function called `figure` may be "
@@ -1059,11 +1055,11 @@ msgstr ""
 "これは基本的に，レンダリングされるすべてのオブジェクトを管理します．Matlabのような環境でのフィギュアのように． `figure` "
 "と呼ばれる便利な関数を使用して，素敵なFigureインスタンスを作成することができます．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:835
+#: ../../mayavi/docs/source/tvtk/README.txt:833
 msgid "`Glyphs`"
 msgstr "`Glyphs`"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:836
+#: ../../mayavi/docs/source/tvtk/README.txt:834
 msgid ""
 "This and its subclasses let one place glyphs at points specified as inputs."
 "  The subclasses are: `Arrows`, `Cones`, `Cubes`, `Cylinders`, `Spheres`, "
@@ -1072,45 +1068,45 @@ msgstr ""
 "このクラスとそのサブクラスは，入力として指定された点にグリフを配置します．サブクラスは: `Arrows`, `Cones`, `Cubes`, "
 "`Cylinders`, `Spheres`, および `Points` です．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:840
+#: ../../mayavi/docs/source/tvtk/README.txt:838
 msgid "`Line3`"
 msgstr "`Line3`"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:841
+#: ../../mayavi/docs/source/tvtk/README.txt:839
 msgid "Draws lines between the points specified at initialization time."
 msgstr "初期化時に指定した点の間に線分を描画します．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:843
+#: ../../mayavi/docs/source/tvtk/README.txt:841
 msgid "`Outline`"
 msgstr "`Outline`"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:844
+#: ../../mayavi/docs/source/tvtk/README.txt:842
 msgid "Draws an outline for the contained objects."
 msgstr "含まれるオブジェクトのアウトラインを描画します．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:846
+#: ../../mayavi/docs/source/tvtk/README.txt:844
 msgid "`Title`"
 msgstr "`Title`"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:847
+#: ../../mayavi/docs/source/tvtk/README.txt:845
 msgid "Draws a title for the entire figure."
 msgstr "図形全体のタイトルを描画します．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:849
+#: ../../mayavi/docs/source/tvtk/README.txt:847
 msgid "`LUTBase`"
 msgstr "`LUTBase`"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:850
+#: ../../mayavi/docs/source/tvtk/README.txt:848
 msgid ""
 "Manages a lookup table and a scalar bar (legend) for it.  This is subclassed"
 " by all classes that need a LUT."
 msgstr "ルックアップテーブルとそのスカラバー (凡例) を管理します．これはLUTを必要とするすべてのクラスによってサブクラス化されます．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:853
+#: ../../mayavi/docs/source/tvtk/README.txt:851
 msgid "`SurfRegular`"
 msgstr "`SurfRegular`"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:854
+#: ../../mayavi/docs/source/tvtk/README.txt:852
 msgid ""
 "MayaVi1's `imv.surf` like functionality that plots surfaces given x (1D), "
 "y(1D) and z (or a callable) arrays."
@@ -1118,35 +1114,35 @@ msgstr ""
 "MayaVi1の `imv.surf` に似た機能で，x (1 D) ，y (1 D) ，z "
 "(または呼び出し可能)配列が指定されたサーフェスをプロットします．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:857
+#: ../../mayavi/docs/source/tvtk/README.txt:855
 msgid "`SurfRegularC`"
 msgstr "`SurfRegularC`"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:858
+#: ../../mayavi/docs/source/tvtk/README.txt:856
 msgid "Also plots contour lines."
 msgstr "等高線もプリントされます．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:860
+#: ../../mayavi/docs/source/tvtk/README.txt:858
 msgid "`TriMesh`"
 msgstr "`TriMesh`"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:861
+#: ../../mayavi/docs/source/tvtk/README.txt:859
 msgid "Given triangle connectivity and points, plots a mesh of them."
 msgstr "三角形の接続性と点を指定して，それらのメッシュをプロットします．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:863
+#: ../../mayavi/docs/source/tvtk/README.txt:861
 msgid "`FancyTriMesh`"
 msgstr "`FancyTriMesh`"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:864
+#: ../../mayavi/docs/source/tvtk/README.txt:862
 msgid "Plots the mesh using tubes and spheres so its fancier."
 msgstr "管と球体を使用してメッシュをプロットし，より華やかさを増します．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:866
+#: ../../mayavi/docs/source/tvtk/README.txt:864
 msgid "`Mesh`"
 msgstr "`Mesh`"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:867
+#: ../../mayavi/docs/source/tvtk/README.txt:865
 msgid ""
 "Given x, y generated from `numpy.mgrid`, and a z to go with it. Along with "
 "optional scalars.  This class builds the triangle connectivity (assuming "
@@ -1155,37 +1151,37 @@ msgstr ""
 "`numpy.mgrid` から生成されたx, yとそれに付随するzを与えます．オプションのスカラーとともに．このクラスは，三角形の接続(x, yが "
 "`numpy.mgrid` のものであると仮定する)を構築し，メッシュを構築して表示します．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:872
+#: ../../mayavi/docs/source/tvtk/README.txt:870
 msgid "`FancyMesh`"
 msgstr "`FancyMesh`"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:873
+#: ../../mayavi/docs/source/tvtk/README.txt:871
 msgid "Like mesh but shows the mesh using tubes and spheres."
 msgstr "メッシュに似ていますが，チューブと球体を使用してメッシュを表示します．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:875
+#: ../../mayavi/docs/source/tvtk/README.txt:873
 msgid "`Surf`"
 msgstr "`Surf`"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:876
+#: ../../mayavi/docs/source/tvtk/README.txt:874
 msgid ""
 "This generates a surface mesh just like Mesh but renders the mesh as a "
 "surface."
 msgstr "Meshと同様にサーフェスメッシュが生成されますが，メッシュはサーフェスとしてレンダリングされます．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:879
+#: ../../mayavi/docs/source/tvtk/README.txt:877
 msgid "`Contour3`"
 msgstr "`Contour3`"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:880
+#: ../../mayavi/docs/source/tvtk/README.txt:878
 msgid "Shows contour for a mesh."
 msgstr "メッシュのコンターを表示します．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:882
+#: ../../mayavi/docs/source/tvtk/README.txt:880
 msgid "`ImShow`"
 msgstr "`ImShow`"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:883
+#: ../../mayavi/docs/source/tvtk/README.txt:881
 msgid ""
 "Allows one to view large numpy arrays as image data using an image actor.  "
 "This is just like MayaVi1's `mayavi.tools.imv.viewi`."
@@ -1193,7 +1189,7 @@ msgstr ""
 "イメージアクタを使用して，多数の配列をイメージデータとして表示できます．これはMayaVi1の `mayavi.tools.imv.viewi` "
 "にそっくりです．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:886
+#: ../../mayavi/docs/source/tvtk/README.txt:884
 msgid ""
 "To see nice examples of all of these look at the `test_*` functions at the "
 "end of the mlab.py file.  Here is a quick example that uses some of these "
@@ -1202,29 +1198,29 @@ msgstr ""
 "これらすべての良い例を見るために，mlab.pyファイルの最後にある `test_*` "
 "関数を見てください．次に，これらのテスト関数の一部を使用する簡単な例を示します．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:901
+#: ../../mayavi/docs/source/tvtk/README.txt:899
 msgid ""
 "Here is the `test_surf` function just to show you how easy it is to use "
 "`mlab`::"
 msgstr "`mlab` の使い方がいかに簡単かを示すために， `test_surf` 関数を以下に示します．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:919
+#: ../../mayavi/docs/source/tvtk/README.txt:917
 msgid ""
 "As you may notice, this example has also been translated from the Octaviz_ "
 "site."
 msgstr "お気づきかもしれませんが，この例は Octaviz_ サイトからも翻訳されています．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:924
+#: ../../mayavi/docs/source/tvtk/README.txt:922
 msgid "`plugins`"
 msgstr "`plugins`"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:926
+#: ../../mayavi/docs/source/tvtk/README.txt:924
 msgid ""
 "TVTK ships with two Envisage plugins.  One for a TVTK scene and another for "
 "the pipeline browser."
 msgstr "TVTKには2つのEnvisageプラグインが付属しています．1つはTVTKシーン用で，もう1つはパイプラインブラウザ用です．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:929
+#: ../../mayavi/docs/source/tvtk/README.txt:927
 msgid ""
 "The `scene` plugin allows one to create a new TVTK scene on the work area.  "
 "Any number of these may be created.  It provides useful menu's to set the "
@@ -1235,7 +1231,7 @@ msgstr ""
 "`scene` "
 "プラグインを使用すると，作業領域に新しいTVTKシーンを作成できます．これらはいくつでも作成できます．シーンのビューを設定するのに(ivtkのメニューのように)便利なメニューがあります．また，ビューをイメージに保存することもできます．プラグインには，ウィンドウの背景色などを設定するためのプリファレンスもいくつか用意されています．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:935
+#: ../../mayavi/docs/source/tvtk/README.txt:933
 msgid ""
 "The `browser` plugin places a pipeline browser on the left of the Envisage "
 "window.  This browser is hooked up to listen to scene additions to the work "
@@ -1245,7 +1241,7 @@ msgstr ""
 "`browser` "
 "プラグインは，Envisageウィンドウの左側にパイプラインブラウザを配置します．このブラウザは，作業領域へのシーン追加を聞くために接続されています．シーンを追加するたびに，ブラウザに最上位ノードとして表示されます．"
 
-#: ../../mayavi/docs/source/tvtk/README.txt:940
+#: ../../mayavi/docs/source/tvtk/README.txt:938
 msgid ""
 "These plugins may be used from any Envisage plugin.  To see a fully "
 "functional example of this please look at the `examples/plugin/` directory."
