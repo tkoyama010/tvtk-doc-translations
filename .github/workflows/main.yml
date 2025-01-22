@@ -11,6 +11,10 @@ on:
 jobs:
   script:
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      issues: write
+      repository-projects: write
     steps:
       - name: Setup Python
         uses: actions/setup-python@v5
