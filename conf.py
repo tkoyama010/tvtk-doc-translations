@@ -13,6 +13,7 @@ This conf.py do:
 
 """
 from pathlib import Path
+
 from sphinx.util import logging
 
 basedir = Path(__file__).resolve().parent / "mayavi/docs/source/tvtk"
