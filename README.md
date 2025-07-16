@@ -12,12 +12,10 @@ conf.py files for each languages have 'language' and 'locale_dirs' values withou
 ## URLs
 
 - RTD project pages for Sphinx:
-
   - https://readthedocs.org/projects/tvtk/ (Master)
   - https://readthedocs.org/projects/tvtk-ja/
 
 - Documentation pages for each languages:
-
   - https://tvtk.readthedocs.io/en/latest/
   - https://tvtk.readthedocs.io/ja/latest/
 
