@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: tvtk 4.8.4.dev0\n"
+"Project-Id-Version: tvtk 0.1.dev1+g55226bf21\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-17 00:33+0000\n"
+"POT-Creation-Date: 2026-07-27 03:49+0000\n"
 "PO-Revision-Date: 2020-05-29 23:27+0000\n"
 "Last-Translator: Tetsuo Koyama <tkoyama010@gmail.com>, 2021\n"
 "Language-Team: Japanese (https://app.transifex.com/tkoyama010/teams/110414/ja/)\n"
@@ -299,21 +299,14 @@ msgstr ""
 
 #: ../../mayavi/docs/source/tvtk/devel.txt:173
 msgid ""
-"For the efficient conversion to `CellArray` objects, an extension module is "
-"required.  The sources for this extension module are in `src/array_ext.*`.  "
-"The Cython_ file can be used to generate the `src/array_ext.c` file like "
-"so::"
+"The conversion to `CellArray` objects is handled by `set_id_type_array` in "
+"`array_handler.py`, a small vectorized NumPy routine.  (This was "
+"historically a Cython extension, `tvtk.array_ext`, but the pure-Python "
+"implementation is fast enough for a once-per-dataset operation and needs no "
+"compiler.)"
 msgstr ""
-"`CellArray` オブジェクトへの効率的な変換のために，拡張モジュールが必要です．この拡張モジュールのソースは `src/array_ext.*`"
-" にあります．Cython_fileは `src/array_ext.c` ファイルを生成するために以下のように使うことができます．"
 
-#: ../../mayavi/docs/source/tvtk/devel.txt:181
-msgid ""
-"The sources ship with the generated source file so that folks without Cython"
-" can build it."
-msgstr "ソースには生成されたソース・ファイルが付属しているため，Cythonを使用していないユーザーでもソース・ファイルを構築できます．"
-
-#: ../../mayavi/docs/source/tvtk/devel.txt:184
+#: ../../mayavi/docs/source/tvtk/devel.txt:179
 msgid ""
 "`special_gen.py` defines all the additional methods for the `DataArray` and "
 "other classes that allow these objects to support iteration, `__repr__`, "
@@ -322,15 +315,15 @@ msgstr ""
 "`special_gen.py` は， `DataArray` と，これらのオブジェクトが反復， `__repr__` ， `__getitem__` "
 "などをサポートすることを可能にする他のクラスのためのすべての追加のメソッドを定義します．"
 
-#: ../../mayavi/docs/source/tvtk/devel.txt:193
+#: ../../mayavi/docs/source/tvtk/devel.txt:185
 msgid "The magical `tvtk` instance"
 msgstr "魔法の `tvtk` インスタンス"
 
-#: ../../mayavi/docs/source/tvtk/devel.txt:195
+#: ../../mayavi/docs/source/tvtk/devel.txt:187
 msgid "When one does the following::"
 msgstr "次のような場合::"
 
-#: ../../mayavi/docs/source/tvtk/devel.txt:199
+#: ../../mayavi/docs/source/tvtk/devel.txt:191
 msgid ""
 "The imported `tvtk` is really an instance of a class and not a module! This "
 "is so because, the tvtk classes are almost 800 in number and they wrap "
@@ -348,15 +341,15 @@ msgstr ""
 " *非常に* 時間がかかります．したがって， `tvtk` は問題を回避するための便利なソリューションを提供します． `tvtk` "
 "はクラス・インスタンスですが，モジュールの場合と同様に動作します．"
 
-#: ../../mayavi/docs/source/tvtk/devel.txt:209
+#: ../../mayavi/docs/source/tvtk/devel.txt:201
 msgid "It supports tab-completion on class names."
 msgstr "クラス名のタブ補完をサポートします．"
 
-#: ../../mayavi/docs/source/tvtk/devel.txt:210
+#: ../../mayavi/docs/source/tvtk/devel.txt:202
 msgid "Allows one to access all the tvtk classes."
 msgstr "すべてのtvtkクラスへのアクセスを許可します．"
 
-#: ../../mayavi/docs/source/tvtk/devel.txt:211
+#: ../../mayavi/docs/source/tvtk/devel.txt:203
 msgid ""
 "Imports extremely fast.  Any slowness in the import is really because tvtk "
 "needs to import VTK.  Thus importing tvtk should not be much slower than "
@@ -364,11 +357,11 @@ msgid ""
 msgstr ""
 "インポートは非常に速い．インポートが遅くなるのは，実際にはtvtkがVTKをインポートする必要があるためです．したがって，tvtkのインポートはvtk自体のインポートよりもそれほど遅くないはずです．"
 
-#: ../../mayavi/docs/source/tvtk/devel.txt:214
+#: ../../mayavi/docs/source/tvtk/devel.txt:206
 msgid "Imports the tvtk classes *only* on demand."
 msgstr "tvtkクラスをオンデマンドで *のみ* インポートします．"
 
-#: ../../mayavi/docs/source/tvtk/devel.txt:216
+#: ../../mayavi/docs/source/tvtk/devel.txt:208
 msgid ""
 "All the tvtk related code is generated and saved into the `tvtk_classes.zip`"
 " file.  The `tvtk` instance is basically an instance of the TVTK class.  "
@@ -388,7 +381,7 @@ msgstr ""
 "関数で行われます．インポートされた各クラスはキャッシュされ( `_cache` "
 "で)，キャッシュされたコピーが存在する場合，クラスは再インポートされません．実装では，クラスとその親クラスをインポートする必要があります．これらの親クラスもキャッシュされます．"
 
-#: ../../mayavi/docs/source/tvtk/devel.txt:228
+#: ../../mayavi/docs/source/tvtk/devel.txt:220
 msgid ""
 "`enthought/tvtk/__init__.py` adds the `tvtk_classes.zip` file into "
 "`sys.path` and instantiates the TVTK class to provide the `tvtk` instance."
@@ -396,17 +389,17 @@ msgstr ""
 "`enthought/tvtk/__init__.py` は `tvtk_classes.zip` ファイルを `sys.path` "
 "に追加し，TVTKクラスをインスタンス化して `tvtk` インスタンスを提供します．"
 
-#: ../../mayavi/docs/source/tvtk/devel.txt:232
+#: ../../mayavi/docs/source/tvtk/devel.txt:224
 msgid ""
 "Note that any files inside the `tvtk_classes.zip` are automatically "
 "generated."
 msgstr "`tvtk_classes.zip` 内部のファイルは自動的に生成されることに注意してください．"
 
-#: ../../mayavi/docs/source/tvtk/devel.txt:237
+#: ../../mayavi/docs/source/tvtk/devel.txt:229
 msgid "Miscellaneous details"
 msgstr "その他の詳細"
 
-#: ../../mayavi/docs/source/tvtk/devel.txt:239
+#: ../../mayavi/docs/source/tvtk/devel.txt:231
 msgid ""
 "`tvtk_base.py` defines some important and frequently used traits that are "
 "used in tvtk.  It is used by all the tvtk classes.  It provides a couple of "
@@ -421,11 +414,11 @@ msgstr ""
 ")をいくつか提供しているので，VTKメソッドの名前を考え抜かれたスタイル名に変更することができます．このモジュールは関数 `deref_vtk` "
 "も提供しており，これを使うとtvtkオブジェクトから基礎となるVTKオブジェクトを取得することができます．"
 
-#: ../../mayavi/docs/source/tvtk/devel.txt:250
+#: ../../mayavi/docs/source/tvtk/devel.txt:242
 msgid "Code Generation"
 msgstr "コード生成"
 
-#: ../../mayavi/docs/source/tvtk/devel.txt:252
+#: ../../mayavi/docs/source/tvtk/devel.txt:244
 msgid ""
 "All the tvtk classes are dynamically generated.  `code_gen.py` is the main "
 "driver module that is responsible for this.  Code generation works involves "
@@ -434,7 +427,7 @@ msgstr ""
 "すべてのtvtkクラスは動的に生成されます． `code_gen.py` "
 "はこれを行う主なドライバモジュールです．コード生成作業には，次の手順が含まれます．"
 
-#: ../../mayavi/docs/source/tvtk/devel.txt:256
+#: ../../mayavi/docs/source/tvtk/devel.txt:248
 msgid ""
 "Listing and sorting all the VTK classes into a class hierarchy. This is done"
 " by `class_tree.py`.  `ClassTree` basically organizes all the VTK classes "
@@ -454,7 +447,7 @@ msgstr ""
 "として表されます．各ノードには，その子および親への参照があります．したがって，1つのノードを指定してクラス階層全体をウォークできます．これはかなり汎用的なコードであり，どのクラス階層でも動作します．その主な機能は，適切な順序でクラスを生成できるようにすることと，クラス階層内のクラスの親と子を簡単に見つけることです．詳細は"
 " `class_tree.py` ．UTSLファイルを参照してください．"
 
-#: ../../mayavi/docs/source/tvtk/devel.txt:270
+#: ../../mayavi/docs/source/tvtk/devel.txt:262
 msgid ""
 "Parsing the methods of each VTK class and categorizing them.  This step also"
 " involves finding the default values of the state of the VTK objects, the "
@@ -469,7 +462,7 @@ msgstr ""
 "`VTKMethodParser` は，デフォルトで `ClassTree` クラスのインスタンスを使用して，その作業の一部を実行します(ただし， "
 "`ClassTree` の使用はオフにすることができます．)．"
 
-#: ../../mayavi/docs/source/tvtk/devel.txt:279
+#: ../../mayavi/docs/source/tvtk/devel.txt:271
 msgid ""
 "Formatting the output code correctly (indentation).  This is handled by the "
 "`indenter.Indent` class.  The `Indent` class lets us format a code-string "
@@ -478,21 +471,21 @@ msgstr ""
 "出力コードを正しくフォーマットする (インデント) ．これは `indenter.Indent` クラスによって処理されます． `Indent` "
 "クラスを使用すると，コードが現在のインデントレベルでフォーマットされるように，コード文字列を適切にフォーマットできます．"
 
-#: ../../mayavi/docs/source/tvtk/devel.txt:284
+#: ../../mayavi/docs/source/tvtk/devel.txt:276
 msgid ""
 "Massaging VTK documentation suitably.  This is done by "
 "`indenter.VTKDocMassager`."
 msgstr "VTK文書を適切にマッサージする．これは `indenter.VTKDocMassager` によって行われます．"
 
-#: ../../mayavi/docs/source/tvtk/devel.txt:287
+#: ../../mayavi/docs/source/tvtk/devel.txt:279
 msgid "Generating the tvtk code.  Done mainly by `code_gen.py`."
 msgstr "tvtkコードの生成．主に `code_gen.py` が担当．"
 
-#: ../../mayavi/docs/source/tvtk/devel.txt:289
+#: ../../mayavi/docs/source/tvtk/devel.txt:281
 msgid "Generating a ZIP file of the code, also done by `code_gen.py`."
 msgstr "コードのZIPファイルを生成します．これも `code_gen.py` によって行われます．"
 
-#: ../../mayavi/docs/source/tvtk/devel.txt:292
+#: ../../mayavi/docs/source/tvtk/devel.txt:284
 msgid ""
 "The `code_gen` module defines a `TVTKGenerator` class that drives the code "
 "generation.  The module uses the `wrapper_gen` module to generate the "
@@ -501,7 +494,7 @@ msgstr ""
 "`code_gen` モジュールはコード生成を駆動する `TVTKGenerator` クラスを定義します．モジュールは `wrapper_gen` "
 "モジュールを使用してラッパークラスを生成します．"
 
-#: ../../mayavi/docs/source/tvtk/devel.txt:296
+#: ../../mayavi/docs/source/tvtk/devel.txt:288
 msgid ""
 "The `wrapper_gen` defines a `WrapperGenerator` class.  An instance of this "
 "class creates an instance of the `VTKMethodParser` (and uses its internal "
@@ -511,7 +504,7 @@ msgstr ""
 "`VTKMethodParser`  (内部 `ClassTree` インスタンスを使用します．)のインスタンスを作成します． "
 "`TVTKGenerator` はこのクラス・ツリーを使用します．"
 
-#: ../../mayavi/docs/source/tvtk/devel.txt:300
+#: ../../mayavi/docs/source/tvtk/devel.txt:292
 msgid ""
 "For each class in the VTK hierarchy (starting from classes at the root of "
 "the tree), the class is parsed, and a suitable tvtk wrapper class (with the "
@@ -527,7 +520,7 @@ msgstr ""
 "`tvtk_helper` モジュール( `The magical tvtk instance`_ "
 "セクションで説明する)も，ラッパーが生成されたクラスと同時に更新されます．これらのクラスはすべて一時ディレクトリにダンプされます．これらのクラスはZIPファイルに入れられます．"
 
-#: ../../mayavi/docs/source/tvtk/devel.txt:310
+#: ../../mayavi/docs/source/tvtk/devel.txt:302
 msgid ""
 "The `tvtk_helper.py` code is generated by the `HelperGenerator` class. The "
 "other tvtk classes are generated by the `WrapperGenerator` class. "
@@ -538,7 +531,7 @@ msgstr ""
 "`WrapperGenerator` クラスによって生成されます．また， 'WrapperGenerator` は `SpecialGenerator`"
 " を利用して，VTKクラスのいくつかに特別なコードを作成します．"
 
-#: ../../mayavi/docs/source/tvtk/devel.txt:315
+#: ../../mayavi/docs/source/tvtk/devel.txt:307
 msgid ""
 "`TVTKGenerator` uses the other code generators and drives the entire code "
 "generation process, builds a ZIP file and optionally cleans up the temporary"
@@ -547,11 +540,11 @@ msgstr ""
 "`TVTKGenerator` "
 "は他のコードジェネレータを使用し，コード生成プロセス全体を駆動し，ZIPファイルを構築し，オプションでラッパーコードが書かれた一時ディレクトリをクリーンアップします．"
 
-#: ../../mayavi/docs/source/tvtk/devel.txt:319
+#: ../../mayavi/docs/source/tvtk/devel.txt:311
 msgid "Please run the following::"
 msgstr "次のコマンドを実行してください:"
 
-#: ../../mayavi/docs/source/tvtk/devel.txt:323
+#: ../../mayavi/docs/source/tvtk/devel.txt:315
 msgid ""
 "To see a list of options to the code generator.  Some of the options are "
 "extremely useful during development.  For example do this to generate the "
@@ -559,7 +552,7 @@ msgid ""
 msgstr ""
 "コードジェネレータのオプションのリストを表示します．オプションの中には，開発中に非常に役立つものもあります．たとえば，いくつかのクラスだけのコードを生成するには，次のようにします．"
 
-#: ../../mayavi/docs/source/tvtk/devel.txt:330
+#: ../../mayavi/docs/source/tvtk/devel.txt:322
 msgid ""
 "The `-n` option ensures that '/tmp/tvtk_tmp' is not removed.  `-z` inhibits "
 "ZIP file generation."
