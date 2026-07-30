@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: tvtk 0.1.dev1+ge2ffb6ff5\n"
+"Project-Id-Version: tvtk 0.1.dev1+g726a31055\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-29 03:21+0000\n"
+"POT-Creation-Date: 2026-07-30 02:54+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -137,7 +137,7 @@ msgid "TVTK is meant to be installed as part of the `mayavi` package. Please vis
 msgstr ""
 
 #: ../../mayavi/docs/source/tvtk/README.txt:58
-msgid "http://docs.enthought.com/mayavi/mayavi/installation.html"
+msgid "https://mayavi.readthedocs.io/en/latest/installation.html"
 msgstr ""
 
 #: ../../mayavi/docs/source/tvtk/README.txt:60
