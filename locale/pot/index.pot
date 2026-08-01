@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2008-2016, Enthought Inc.
+# Copyright (C) Enthought, Inc.
 # This file is distributed under the same license as the tvtk package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: tvtk 0.1.dev1+g55226bf21\n"
+"Project-Id-Version: tvtk 0.1.dev\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-27 03:49+0000\n"
+"POT-Creation-Date: 2026-07-31 03:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
